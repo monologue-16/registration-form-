@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="icon" type="image/jpeg" href="school-logo-free-vector.jpg">
+    <link rel="stylesheet" href="student-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <svg class="book-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20v-2H6.5c-1.378 0-2.612.842-3.16 2.048m0 0A2.5 2.5 0 0 0 4 19.5v.006h.01m0 0h15.99m-15.99 0v-3.054m0 0a2.3 2.3 0 0 1 .306-.815l.314-.624A1 1 0 0 0 4 12.004V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 0-2 2v3.054z"/>
+                <path d="M6 4v10h12V4H6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="header-content">
+                <h1>Jackson High School Result System</h1>
+                <p class="subtitle">Enter student information to calculate grades and remarks</p>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <form id="resultForm">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input 
+                        type="text" 
+                        id="studentName" 
+                        name="studentName" 
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="studentMarks">Student Marks (0-100):</label>
+                    <input 
+                        type="number" 
+                        id="studentMarks" 
+                        name="studentMarks" 
+                        placeholder="Enter marks"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Clear</button>
+            </form>
+        </div>
+
+        <div id="resultContainer" class="result-container hidden">
+            <div class="result-card">
+                <h2>Result Details</h2>
+                
+                <div class="result-item">
+                    <span class="label">Student Name:</span>
+                    <span class="value" id="displayName"></span>
+                </div>
+
+                <div class="result-item">
+                    <span class="label">Marks:</span>
+                    <span class="value" id="displayMarks"></span>
+                </div>
+
+                <div class="result-item">
+                    <span class="label">Grade:</span>
+                    <span class="value grade" id="displayGrade"></span>
+                </div>
+
+                <div class="result-item">
+                    <span class="label">Remarks:</span>
+                    <span class="value remarks" id="displayRemarks"></span>
+                </div>
+
+                <div class="result-item">
+                    <span class="label">Status:</span>
+                    <span class="value status" id="displayStatus"></span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Student Result Management System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="student-script.js"></script>
+</body>
+</html>
